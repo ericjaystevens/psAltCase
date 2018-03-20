@@ -31,12 +31,12 @@ function convertTo-lowerCamelCase {
         [Parameter(ValueFromPipeline)]
         [string[]] $inputString,
         
-        [char[]]$deliminator = @(" ")
+        [char[]]$delimiter = @(" ")
     )
     foreach ($sentance in $inputString){
-        foreach ($delim in $deliminator){
+        foreach ($delim in $delimiter){
             $newSentance = ""
-            foreach ($word in ($sentance.split($deliminator)) ){
+            foreach ($word in ($sentance.split($delimiter)) ){
                 $word = $word.toLower()
                 $newSentance += $word.Substring(0,1).ToUpper() + $word.Substring(1)
             }
