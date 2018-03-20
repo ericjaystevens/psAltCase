@@ -1,6 +1,7 @@
-== Examples ==
+Examples
+--------
 
 ```powershell
-> "works like this" | converTo-camelCase
-> WorksLikeThis
+> "works like this" | convertTo-lowerCamelCase
+> worksLikeThis
 ```
